@@ -31,22 +31,23 @@ body {
 
 }
 
-article {
+div {
+    background-color: var(--color-card);
     width: 100%;
     height: 440px;
     padding: 48px;
 }
 
 .sedans {
-    background-color: var(--brightOrange);
+    --color-card: var(--brightOrange);
 }
 
 .suvs {
-    background-color: var(--darkCyan);
+    --color-card: var(--darkCyan);
 }
 
 .luxury {
-    background-color: var(--veryDarkCyan);
+    --color-card: var(--veryDarkCyan);
 }
 
 img {
@@ -66,46 +67,26 @@ p {
     margin-bottom: 30px;
 }
 
-button {
-    border-style: none;
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--color-card);
+    padding: 15px 30px;
     border-radius: 45px;
-    width: 146px;
-    height: 48px;
-    background-color: var(--veryLightGray);
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
-}
-
-.sedansBtn {
-    color: var(--brightOrange);
-}
-
-.suvsBtn {
-    color: var(--darkCyan);
-}
-
-.luxuryBtn {
-    color: var(--veryDarkCyan);
-}
-
-button:hover{
+    background: var(--veryLightGray);
+    border: 3px solid var(--veryLightGray);
     cursor: pointer;
-    border: 2px solid var(--veryLightGray);    
+    transition: 0.3s;
+}
+
+.btn:hover, .btn:focus-within {
+    background: transparent;
     color: var(--veryLightGray);
 }
 
-.sedansBtn:hover {
-    background-color: var(--brightOrange);
+.btn:focus-within {
+    outline: 1px solid var(--veryLightGray);
 }
-
-.suvsBtn:hover {
-    background-color: var(--darkCyan);
-}
-
-.luxuryBtn:hover {
-    background-color: var(--veryDarkCyan);
-}
-
 
 .attribution { 
     font-size: 11px; 
@@ -116,14 +97,14 @@ button:hover{
     color: hsl(228, 45%, 44%); 
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 944px) {
     .container {
         width: 920px;
         margin-top: 170px;
         display: flex;
     }
 
-    article {
+    div {
         height: 500px;
     }
 
